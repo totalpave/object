@@ -1,7 +1,7 @@
 # Changelog
 
-## 0.0.3-dev
-- 
+## 0.0.3 (Feb 4, 2020)
+- [#1](https://github.com/totalpave/object/pull/1) - Changed build target to `es3`
 
 ## 0.0.2 (Jan 8, 2020)
 - Removed `src` from `.gitignore`, as they are required for sourcemaps
