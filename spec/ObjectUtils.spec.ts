@@ -217,4 +217,30 @@ describe('ObjectUtils', () => {
             expect(ObjectUtils.isVoid(Infinity)).toBe(false);
         });
     });
+
+    describe('Merge', () => {
+        it('merges', () => {
+            let o1 = {
+                fname: 'John',
+                lname: 'Smith',
+                age: 30,
+                canSwim: false
+            };
+
+            let o2 = {
+                fname: 'Norman',
+                lname: 'Breau',
+                age: 31,
+                handicapped: true
+            };
+
+            expect(ObjectUtils.merge(o1, o2)).toEqual({
+                fname: 'Norman',
+                lname: 'Breau',
+                age: 31,
+                canSwim: false,
+                handicapped: true
+            });
+        });
+    });
 });

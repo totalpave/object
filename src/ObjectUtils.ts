@@ -10,6 +10,20 @@ export class ObjectUtils {
         return arr;
     }
 
+    /**
+     * Merges o2 into o1. Only does shallow merges.
+     * o2 properties will overwrite o1 properties.
+     * 
+     * @param o1 The base object
+     * @param o2 The merging object
+     */
+    public static merge(o1: any, o2: any): any {
+        return {
+            ...o1,
+            ...o2
+        };
+    }
+
     public static clone(o: any): any {
         // Check for pass-by-val types
         if (!o || o === true || typeof o === 'string' || typeof o === 'number') {
