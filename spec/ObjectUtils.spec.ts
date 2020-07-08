@@ -1,5 +1,6 @@
 
 import {ObjectUtils} from '../src/ObjectUtils';
+import {IComparable} from '../src/IComparable';
 
 describe('ObjectUtils', () => {
     it('toArray', () => {
@@ -240,6 +241,213 @@ describe('ObjectUtils', () => {
                 age: 31,
                 canSwim: false,
                 handicapped: true
+            });
+        });
+    });
+
+    describe('Compare', () => {
+        describe('NaNs', () => {
+            it('should return true', () => {
+                expect(ObjectUtils.compare(NaN, NaN)).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare(NaN, 123)).toBe(false);
+            });
+        });
+
+        describe('Strings', () => {
+            it('should return true', () => {
+                expect(ObjectUtils.compare("test", "test")).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare("test", "123")).toBe(false);
+            });
+
+            it('should return false (type mismatch)', () => {
+                expect(ObjectUtils.compare('adsf', 123)).toBe(false);
+            });
+        });
+
+        describe('Numbers', () => {
+            it('should return true', () => {
+                expect(ObjectUtils.compare(123, 123)).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare(123, 1234)).toBe(false);
+            });
+
+            it('should return false (type mismatch)', () => {
+                expect(ObjectUtils.compare(123, [])).toBe(false);
+            });
+        });
+
+        describe('Dates', () => {
+            it('should return true', () => {
+                expect(ObjectUtils.compare(new Date(1234), new Date(1234))).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare(new Date(123), new Date(1234))).toBe(false);
+            });
+
+            it('should return false (type mismatch)', () => {
+                expect(ObjectUtils.compare(new Date(), 'asdf')).toBe(false);
+            });
+        });
+
+        describe('Functions', () => {
+            it('should return true', () => {
+                expect(ObjectUtils.compare(function () {
+                    return "hi";
+                }, function() {
+                    return "hi";
+                })).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare(function() {
+                    return "hi";
+                }, function() {
+                    return "world";
+                })).toBe(false);
+            });
+
+            it('should return false (type mismatch)', () => {
+                expect(ObjectUtils.compare(() => {}, 123)).toBe(false);
+            });
+        });
+
+        describe('Booleans', () => {
+            it('should return true', () => {
+                expect(ObjectUtils.compare(true, true)).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare(false, true)).toBe(false);
+            });
+
+            it('should return false (type mismatch)', () => {
+                expect(ObjectUtils.compare(true, 123)).toBe(false);
+            });
+        });
+
+        describe('Arrays', () => {
+            it('should return true', () => {
+                expect(ObjectUtils.compare([
+                    1,
+                    2,
+                    3
+                ], [
+                    1,
+                    2,
+                    3
+                ])).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare([
+                    1,
+                    2,
+                    3
+                ], [
+                    1,
+                    2,
+                    3,
+                    4
+                ])).toBe(false);
+
+                expect(ObjectUtils.compare([
+                    1,
+                    2,
+                    3
+                ], [
+                    1,
+                    3,
+                    4
+                ])).toBe(false);
+            });
+
+            it('should return false (type mismatch)', () => {
+                expect(ObjectUtils.compare([], 123)).toBe(false);
+            });
+        });
+
+        describe('Arrays recursive', () => {
+            it('should return true', () => {
+                expect(ObjectUtils.compare([
+                    [
+                        1,
+                        2,
+                        3
+                    ]
+                ], [
+                    [
+                        1,
+                        2,
+                        3
+                    ]
+                ])).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare([
+                    [
+                        1,
+                        2,
+                        3
+                    ]
+                ], [
+                    [
+                        1,
+                        2,
+                        4
+                    ]
+                ])).toBe(false);
+            });
+        });
+
+        describe('Objects', () => {
+            it('should return true', () => {
+                expect(ObjectUtils.compare({
+                    "hi": "world"
+                }, {
+                    "hi": "world"
+                })).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare({
+                    "hi" : "world"
+                }, {
+                    "hi": "mom"
+                })).toBe(false);
+            });
+
+            it('should return false (type mismatch)', () => {
+                expect(ObjectUtils.compare({}, 123)).toBe(false);
+            });
+
+            it('should return false (key length mismatch)', () => {
+                expect(ObjectUtils.compare({}, {hi:true})).toBe(false);
+            });
+        });
+
+        describe('compare method', () => {
+            let obj: IComparable = {
+                compare: (o: any): boolean => {
+                    return o.hi === true;
+                }
+            };
+
+            it('should return true', () => {
+                expect(ObjectUtils.compare(obj, {hi:true, test:123})).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare(obj, {hi:false, test:123})).toBe(false);
             });
         });
     });

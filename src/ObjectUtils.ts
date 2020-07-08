@@ -71,4 +71,88 @@ export class ObjectUtils {
     public static isVoid(o: any): boolean {
         return o === null || o === undefined;
     }
+
+    /**
+     * Recursively compares two objects to determine if they are the same
+     * value wise. Wil return true if the two objects
+     * are referencing two different objects, but both
+     * objects have the same keys and values.
+     * 
+     * If an object has a `compare()` method, it will be invoked via
+     * `o1.compare(o2)`. See `IComparable` interface
+     * 
+     * @param o1 
+     * @param o2 
+     */
+    public static compare(o1: any, o2: any): boolean {
+        if (o1.toString() === 'NaN' && o2.toString() === 'NaN') {
+            return true;
+        }
+
+        if (!o1 || o1 === true || typeof o1 === 'string' || typeof o1 === 'number') {
+            return o1 === o2;
+        }
+
+        if (o1.compare) {
+            return o1.compare(o2);
+        }
+
+        if (o1 instanceof Array) {
+            if (o2 instanceof Array) {
+                if (o1.length === o2.length) {
+                    for (let i: number = 0; i < o1.length; i++) {
+                        let o1v: any = o1[i];
+                        let o2v: any = o2[i];
+                        if (!ObjectUtils.compare(o1v, o2v)) {
+                            return false;
+                        }
+                    }
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                return false;
+            }
+        }
+        else if (o1 instanceof Date) {
+            if (o2 instanceof Date) {
+                return o1.toString() === o2.toString();
+            }
+            else {
+                return false;
+            }
+        }
+        else if (o1 instanceof Function) {
+            if (o2 instanceof Function) {
+                return o1.toString() === o2.toString();
+            }
+            else {
+                return false;
+            }
+        }
+        // If there are more types to test, you may want to follow the pattern above
+        else if (typeof o1 === 'object') {
+            if (typeof o2 === 'object') {
+                if (Object.keys(o1).length === Object.keys(o2).length) {
+                    for (let i in o1) {
+                        let o1v: any = o1[i];
+                        let o2v: any = o2[i];
+                        if (!ObjectUtils.compare(o1v, o2v)) {
+                            return false;
+                        }
+                    }
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
