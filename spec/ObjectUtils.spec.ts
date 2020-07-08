@@ -459,6 +459,24 @@ describe('ObjectUtils', () => {
             it('null - undefined', () => {
                 expect(ObjectUtils.compare(null, undefined)).toBe(false);
             });
-        })
+        });
+
+        describe('React Nodes', () => {
+            let o1: any = {
+                $$typeof: 'react',
+                complex: null
+            };
+            o1.complex = o1;
+
+            let o2 = o1;
+
+            it('should return true', () => {
+                expect(ObjectUtils.compare(o1, o2)).toBe(true);
+            });
+
+            it('should return false', () => {
+                expect(ObjectUtils.compare(o1, {})).toBe(false);
+            });
+        });
     });
 });

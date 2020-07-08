@@ -136,6 +136,10 @@ export class ObjectUtils {
                 return false;
             }
         }
+        // These are react nodes
+        if (o1.$$typeof) {
+            return o1 === o2;
+        }
         // If there are more types to test, you may want to follow the pattern above
         else if (typeof o1 === 'object') {
             if (typeof o2 === 'object') {
