@@ -450,5 +450,15 @@ describe('ObjectUtils', () => {
                 expect(ObjectUtils.compare(obj, {hi:false, test:123})).toBe(false);
             });
         });
+
+        describe('nulls/undefined', () => {
+            it('null - null', () => {
+                expect(ObjectUtils.compare(null, null)).toBe(true);
+            });
+
+            it('null - undefined', () => {
+                expect(ObjectUtils.compare(null, undefined)).toBe(false);
+            });
+        })
     });
 });

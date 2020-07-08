@@ -85,6 +85,10 @@ export class ObjectUtils {
      * @param o2 
      */
     public static compare(o1: any, o2: any): boolean {
+        if (ObjectUtils.isVoid(o1) || ObjectUtils.isVoid(o2)) {
+            return o1 === o2;
+        }
+
         if (o1.toString() === 'NaN' && o2.toString() === 'NaN') {
             return true;
         }
