@@ -1,9 +1,10 @@
+import { IDictionary } from './IDictionary';
 
 export class ObjectUtils {
     private constructor() {}
 
-    public static toArray(o: any): Array<any> {
-        let arr: Array<any> = [];
+    public static toArray<T = any>(o: {[key: string]: T}): Array<T> {
+        let arr: Array<T> = [];
         for (let i in o) {
             arr.push(o[i]);
         }
@@ -17,13 +18,14 @@ export class ObjectUtils {
      * @param o1 The base object
      * @param o2 The merging object
      */
-    public static merge(o1: any, o2: any): any {
+    public static merge<T1 = any, T2 = any>(o1: T1, o2: T2): IDictionary {
         return {
             ...o1,
             ...o2
         };
     }
 
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     public static clone(o: any): any {
         // Check for pass-by-val types
         if (!o || o === true || typeof o === 'string' || typeof o === 'number') {
@@ -41,7 +43,7 @@ export class ObjectUtils {
         let isArray: boolean = o instanceof Array;
         let obj: any = isArray ? [] : {};
         
-        for (const i in o) {
+        for (let i in o) {
             let value = o[i];
 
             if (!value || value === true || typeof value === 'string' || typeof value === 'number') { // typeof null === 'object'
@@ -68,6 +70,7 @@ export class ObjectUtils {
         return obj;
     }
 
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     public static isVoid(o: any): boolean {
         return o === null || o === undefined;
     }
@@ -84,6 +87,7 @@ export class ObjectUtils {
      * @param o1 
      * @param o2 
      */
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     public static compare(o1: any, o2: any): boolean {
         if (ObjectUtils.isVoid(o1) || ObjectUtils.isVoid(o2)) {
             return o1 === o2;
