@@ -28,8 +28,9 @@ describe('KeyValueAdapter', () => {
             value: "world"
         });
 
+        let key = "asdf";
         expect(() => {
-            adapter.adapt(<any>"asdf");
-        }).toThrowError(/doesn't exist in map\.$/);
+            adapter.adapt(<any>key);
+        }).toThrowError(`Key "${key}" doesn't exist in map.`);
     });
 });
