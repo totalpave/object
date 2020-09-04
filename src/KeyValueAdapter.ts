@@ -11,7 +11,7 @@ export class KeyValueAdapter<TMap = IDictionary> {
         this._map = adapterMap;
     }
 
-    public setAdaptKey(key: keyof TMap, value: TMap[keyof TMap]): void {
+    public setAdapterKey(key: keyof TMap, value: TMap[keyof TMap]): void {
         this._map[key] = value;
     }
 

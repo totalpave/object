@@ -56,7 +56,7 @@ describe('KeyValueAdapter', () => {
         expect(adapter.adapt('test')).toBe('hi');
         expect(adapter.adapt('value')).toBe('world');
 
-        adapter.setAdaptKey('rawr', 'thesky');
+        adapter.setAdapterKey('rawr', 'thesky');
 
         expect(adapter.adapt('test')).toBe('hi');
         expect(adapter.adapt('value')).toBe('world');
