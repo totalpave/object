@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.4
+## 0.0.4 (Sep 4, 2020)
 - Added setAdapterKey to KeyValueAdapter.
 
 ## 0.0.3 (Feb 4, 2020)
