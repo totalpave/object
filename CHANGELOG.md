@@ -1,7 +1,7 @@
 # Changelog
 
-## 0.0.4 (Sep 4, 2020)
-- Added setAdapterKey to KeyValueAdapter.
+## 0.0.4-dev
+- 
 
 ## 0.0.3 (Feb 4, 2020)
 - [#1](https://github.com/totalpave/object/pull/1) - Changed build target to `es3`
