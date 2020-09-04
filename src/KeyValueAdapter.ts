@@ -11,6 +11,10 @@ export class KeyValueAdapter<TMap = IDictionary> {
         this._map = adapterMap;
     }
 
+    public setAdaptKey(key: keyof TMap, value: TMap[keyof TMap]): void {
+        this._map[key] = value;
+    }
+
     public adapt(key: keyof TMap): TMap[keyof TMap] {
         if (Object.keys(this._map).indexOf(<string>key) === -1) {
             throw new Error(`Key "${key}" doesn't exist in map.`);
