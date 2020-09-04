@@ -1,4 +1,4 @@
-import { IDictionary } from './IDictionary';
+import { IDictionary } from '@totalpave/interfaces';
 
 export class ObjectUtils {
     private constructor() {}

@@ -26,15 +26,5 @@ describe('Public API', () => {
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
             let type: api.ISerializable = null;
         });
-
-        it('IDictionary', () => {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            let type: api.IDictionary = null;
-        });
-
-        it('IDictionary with generic', () => {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            let type: api.IDictionary<string> = null;
-        });
     });
 });

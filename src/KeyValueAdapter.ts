@@ -1,6 +1,6 @@
-import { IDictionary } from './IDictionary';
+import { IDictionary } from '@totalpave/interfaces';
 
-export class KeyValueAdapter<TMap = IDictionary> {
+export class KeyValueAdapter<TMap extends IDictionary = IDictionary> {
     private _map: TMap;
 
     public constructor(adapterMap: TMap) {
