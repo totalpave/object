@@ -7,11 +7,13 @@
   "scripts": {
     "lint": "node --max_old_space_size=6144 ./node_modules/eslint/bin/eslint.js --ext .ts '?(src|spec)/**/*.ts' --cache",
     "build": "npm run lint && tsc",
+    "build:release": "tsc",
     "test": "npm run-script lint && nyc --reporter=lcov --reporter=text ts-node ./spec/support/jasmine.ts",
-    "docs": "typedoc --options typedoc.json",
+    "docs": "typedoc --excludePrivate --includeVersion -readme ./README.md --out ./docs ./src",
     "prepublishOnly": "npm run-script build",
     "changelog": "auto-changelog --output CHANGELOG.md -p --release-summary --ignore-commit-pattern chore --issue-pattern '[A-Z]+-\\d+' --issue-url https://totalpave.atlassian.net/browse/{id}",
-    "version": "npm run docs && npm run changelog && git add CHANGELOG.md docs && git commit -m 'chore: release'",
+    "preversion": "npm test",
+    "version": "NODE_ENV=production npm run-script build:release && npm run-script docs && npm run changelog && git add CHANGELOG.md docs && git commit -m 'chore: changelog'",
     "postversion": "git push && git push --tags"
   },
   "repository": {
@@ -26,20 +28,21 @@
   "homepage": "https://github.com/totalpave/object#readme",
   "devDependencies": {
     "@totalpave/eslint-plugin": "4.0.0",
-    "@types/jasmine": "3.5.14",
-    "@typescript-eslint/eslint-plugin": "4.0.1",
-    "@typescript-eslint/parser": "4.0.1",
+    "@types/jasmine": "3.6.4",
+    "@typescript-eslint/eslint-plugin": "4.16.1",
+    "@typescript-eslint/parser": "4.16.1",
     "auto-changelog": "2.2.1",
-    "eslint": "7.8.1",
-    "jasmine": "3.6.1",
-    "jasmine-spec-reporter": "5.0.2",
+    "eslint": "7.21.0",
+    "jasmine": "3.6.4",
+    "jasmine-spec-reporter": "6.0.0",
     "nyc": "15.1.0",
-    "ts-node": "9.0.0",
-    "typedoc": "0.19.0",
-    "typescript": "4.0.2"
+    "ts-node": "9.1.1",
+    "typedoc": "0.20.29",
+    "typedoc-plugin-markdown": "3.6.0",
+    "typescript": "4.1.5"
   },
   "dependencies": {
-    "@totalpave/interfaces": "1.0.0",
-    "@types/node": "12.12.55"
+    "@totalpave/interfaces": "2.2.2",
+    "@types/node": "12.20.4"
   }
 }
