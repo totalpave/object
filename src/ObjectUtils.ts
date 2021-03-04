@@ -70,14 +70,18 @@ export class ObjectUtils {
         return obj;
     }
 
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    public static isVoid(o: any): boolean {
+    /**
+     * Returns true if the input object is null or undefined.
+     * 
+     * @param o 
+     */
+    public static isVoid<T = any>(o: T): boolean {
         return o === null || o === undefined;
     }
 
     /**
      * Recursively compares two objects to determine if they are the same
-     * value wise. Wil return true if the two objects
+     * value wise. Will return true if the two objects
      * are referencing two different objects, but both
      * objects have the same keys and values.
      * 
