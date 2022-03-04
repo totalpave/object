@@ -9,7 +9,7 @@
     "build": "npm run lint && tsc",
     "build:release": "tsc",
     "test": "npm run-script lint && nyc --reporter=lcov --reporter=text ts-node ./spec/support/jasmine.ts",
-    "docs": "typedoc --excludePrivate --includeVersion -readme ./README.md --out ./docs ./src",
+    "docs": "typedoc --excludePrivate --includeVersion -readme ./README.md --out ./docs ./src/api.ts",
     "prepublishOnly": "npm run-script build",
     "changelog": "auto-changelog --output CHANGELOG.md -p --release-summary --ignore-commit-pattern chore --issue-pattern '[A-Z]+-\\d+' --issue-url https://totalpave.atlassian.net/browse/{id}",
     "preversion": "npm test",

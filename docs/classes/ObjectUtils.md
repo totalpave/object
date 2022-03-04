@@ -1,18 +1,16 @@
-[@totalpave/object - v1.1.0](../README.md) / [Exports](../modules.md) / [ObjectUtils](../modules/ObjectUtils.md) / ObjectUtils
+[@totalpave/object - v1.1.0](../README.md) / [Exports](../modules.md) / ObjectUtils
 
 # Class: ObjectUtils
-
-[ObjectUtils](../modules/ObjectUtils.md).ObjectUtils
 
 ## Table of contents
 
 ### Methods
 
-- [clone](ObjectUtils.ObjectUtils-1.md#clone)
-- [compare](ObjectUtils.ObjectUtils-1.md#compare)
-- [isVoid](ObjectUtils.ObjectUtils-1.md#isvoid)
-- [merge](ObjectUtils.ObjectUtils-1.md#merge)
-- [toArray](ObjectUtils.ObjectUtils-1.md#toarray)
+- [clone](ObjectUtils.md#clone)
+- [compare](ObjectUtils.md#compare)
+- [isVoid](ObjectUtils.md#isvoid)
+- [merge](ObjectUtils.md#merge)
+- [toArray](ObjectUtils.md#toarray)
 
 ## Methods
 
@@ -32,7 +30,7 @@
 
 #### Defined in
 
-[ObjectUtils.ts:30](https://github.com/totalpave/object/blob/539a0d4/src/ObjectUtils.ts#L30)
+[ObjectUtils.ts:30](https://github.com/totalpave/object/blob/dfa4398/src/ObjectUtils.ts#L30)
 
 ___
 
@@ -61,7 +59,7 @@ If an object has a `compare()` method, it will be invoked via
 
 #### Defined in
 
-[ObjectUtils.ts:103](https://github.com/totalpave/object/blob/539a0d4/src/ObjectUtils.ts#L103)
+[ObjectUtils.ts:103](https://github.com/totalpave/object/blob/dfa4398/src/ObjectUtils.ts#L103)
 
 ___
 
@@ -89,7 +87,7 @@ Returns true if the input object is null or undefined.
 
 #### Defined in
 
-[ObjectUtils.ts:86](https://github.com/totalpave/object/blob/539a0d4/src/ObjectUtils.ts#L86)
+[ObjectUtils.ts:86](https://github.com/totalpave/object/blob/dfa4398/src/ObjectUtils.ts#L86)
 
 ___
 
@@ -120,7 +118,7 @@ o2 properties will overwrite o1 properties.
 
 #### Defined in
 
-[ObjectUtils.ts:22](https://github.com/totalpave/object/blob/539a0d4/src/ObjectUtils.ts#L22)
+[ObjectUtils.ts:22](https://github.com/totalpave/object/blob/dfa4398/src/ObjectUtils.ts#L22)
 
 ___
 
@@ -146,4 +144,4 @@ ___
 
 #### Defined in
 
-[ObjectUtils.ts:7](https://github.com/totalpave/object/blob/539a0d4/src/ObjectUtils.ts#L7)
+[ObjectUtils.ts:7](https://github.com/totalpave/object/blob/dfa4398/src/ObjectUtils.ts#L7)

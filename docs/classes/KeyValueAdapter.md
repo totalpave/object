@@ -1,26 +1,24 @@
-[@totalpave/object - v1.1.0](../README.md) / [Exports](../modules.md) / [KeyValueAdapter](../modules/KeyValueAdapter.md) / KeyValueAdapter
+[@totalpave/object - v1.1.0](../README.md) / [Exports](../modules.md) / KeyValueAdapter
 
 # Class: KeyValueAdapter<TMap\>
-
-[KeyValueAdapter](../modules/KeyValueAdapter.md).KeyValueAdapter
 
 ## Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `TMap` | extends `IDictionary``IDictionary` |
+| `TMap` | extends `IDictionary` = `IDictionary` |
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](KeyValueAdapter.KeyValueAdapter-1.md#constructor)
+- [constructor](KeyValueAdapter.md#constructor)
 
 ### Methods
 
-- [adapt](KeyValueAdapter.KeyValueAdapter-1.md#adapt)
-- [setAdapterKey](KeyValueAdapter.KeyValueAdapter-1.md#setadapterkey)
-- [setAdapterMap](KeyValueAdapter.KeyValueAdapter-1.md#setadaptermap)
+- [adapt](KeyValueAdapter.md#adapt)
+- [setAdapterKey](KeyValueAdapter.md#setadapterkey)
+- [setAdapterMap](KeyValueAdapter.md#setadaptermap)
 
 ## Constructors
 
@@ -32,7 +30,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `TMap` | extends `IDictionary`<`any`, `TMap`\>`IDictionary`<`any`\> |
+| `TMap` | extends `IDictionary`<`any`, `TMap`\> = `IDictionary`<`any`\> |
 
 #### Parameters
 
@@ -42,7 +40,7 @@
 
 #### Defined in
 
-[KeyValueAdapter.ts:6](https://github.com/totalpave/object/blob/539a0d4/src/KeyValueAdapter.ts#L6)
+[KeyValueAdapter.ts:6](https://github.com/totalpave/object/blob/dfa4398/src/KeyValueAdapter.ts#L6)
 
 ## Methods
 
@@ -62,7 +60,7 @@
 
 #### Defined in
 
-[KeyValueAdapter.ts:18](https://github.com/totalpave/object/blob/539a0d4/src/KeyValueAdapter.ts#L18)
+[KeyValueAdapter.ts:18](https://github.com/totalpave/object/blob/dfa4398/src/KeyValueAdapter.ts#L18)
 
 ___
 
@@ -83,7 +81,7 @@ ___
 
 #### Defined in
 
-[KeyValueAdapter.ts:14](https://github.com/totalpave/object/blob/539a0d4/src/KeyValueAdapter.ts#L14)
+[KeyValueAdapter.ts:14](https://github.com/totalpave/object/blob/dfa4398/src/KeyValueAdapter.ts#L14)
 
 ___
 
@@ -103,4 +101,4 @@ ___
 
 #### Defined in
 
-[KeyValueAdapter.ts:10](https://github.com/totalpave/object/blob/539a0d4/src/KeyValueAdapter.ts#L10)
+[KeyValueAdapter.ts:10](https://github.com/totalpave/object/blob/dfa4398/src/KeyValueAdapter.ts#L10)

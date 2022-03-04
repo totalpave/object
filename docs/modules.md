@@ -4,11 +4,13 @@
 
 ## Table of contents
 
-### Modules
+### Classes
 
-- [ICloneable](modules/ICloneable.md)
-- [IComparable](modules/IComparable.md)
-- [ISerializable](modules/ISerializable.md)
-- [KeyValueAdapter](modules/KeyValueAdapter.md)
-- [ObjectUtils](modules/ObjectUtils.md)
-- [api](modules/api.md)
+- [KeyValueAdapter](classes/KeyValueAdapter.md)
+- [ObjectUtils](classes/ObjectUtils.md)
+
+### Interfaces
+
+- [ICloneable](interfaces/ICloneable.md)
+- [IComparable](interfaces/IComparable.md)
+- [ISerializable](interfaces/ISerializable.md)
