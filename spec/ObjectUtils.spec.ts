@@ -1,6 +1,7 @@
 
 import {ObjectUtils} from '../src/ObjectUtils';
 import {IComparable} from '../src/IComparable';
+import { Blob } from '@totalpave/blob';
 
 describe('ObjectUtils', () => {
     it('toArray', () => {
@@ -166,6 +167,24 @@ describe('ObjectUtils', () => {
             let clone: Date = ObjectUtils.clone(date);
             expect(clone).toEqual(date);
             expect(clone).not.toBe(date);
+        });
+
+        it('blob', () => {
+            let blob: Blob = new Blob([ 'my data' ]);
+            let clone: Blob = ObjectUtils.clone(blob);
+            expect(clone instanceof Blob).toBe(true);
+        })
+
+        it('Array of Blob', () => {
+            let blob: Blob = new Blob([ 'my data' ]);
+            let clone: Array<Blob> = ObjectUtils.clone([ blob ]);
+            expect(clone[0] instanceof Blob).toBe(true);
+        });
+
+        it('Object with Blob', () => {
+            let blob: Blob = new Blob([ 'my data' ]);
+            let clone: { bob: Blob } = ObjectUtils.clone({ bob: blob });
+            expect(clone.bob instanceof Blob).toBe(true);
         });
     });
 

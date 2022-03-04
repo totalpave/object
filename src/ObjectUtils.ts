@@ -1,4 +1,5 @@
 import { IDictionary } from '@totalpave/interfaces';
+import { Blob } from '@totalpave/blob';
 
 export class ObjectUtils {
     private constructor() {}
@@ -40,6 +41,10 @@ export class ObjectUtils {
             return new Date(o.getTime());
         }
 
+        if (o instanceof Blob) {
+            return o.slice();
+        }
+
         let isArray: boolean = o instanceof Array;
         let obj: any = isArray ? [] : {};
         
@@ -54,6 +59,9 @@ export class ObjectUtils {
             }
             else if (value instanceof Date) {
                 value = new Date(value.getTime());
+            }
+            else if (value instanceof Blob) {
+                value = value.slice();
             }
             else if (typeof value === 'object') {
                 if (value !== null && typeof value.clone === 'function') {
