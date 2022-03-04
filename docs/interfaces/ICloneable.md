@@ -1,4 +1,4 @@
-[@totalpave/object - v1.1.1](../README.md) / [Exports](../modules.md) / ICloneable
+[@totalpave/object - v1.1.2](../README.md) / [Exports](../modules.md) / ICloneable
 
 # Interface: ICloneable<T\>
 
@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[ICloneable.ts:3](https://github.com/totalpave/object/blob/0eede96/src/ICloneable.ts#L3)
+[ICloneable.ts:3](https://github.com/totalpave/object/blob/0ba4518/src/ICloneable.ts#L3)

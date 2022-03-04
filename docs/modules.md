@@ -1,6 +1,6 @@
-[@totalpave/object - v1.1.1](README.md) / Exports
+[@totalpave/object - v1.1.2](README.md) / Exports
 
-# @totalpave/object - v1.1.1
+# @totalpave/object - v1.1.2
 
 ## Table of contents
 

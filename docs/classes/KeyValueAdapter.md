@@ -1,4 +1,4 @@
-[@totalpave/object - v1.1.1](../README.md) / [Exports](../modules.md) / KeyValueAdapter
+[@totalpave/object - v1.1.2](../README.md) / [Exports](../modules.md) / KeyValueAdapter
 
 # Class: KeyValueAdapter<TMap\>
 
@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[KeyValueAdapter.ts:6](https://github.com/totalpave/object/blob/0eede96/src/KeyValueAdapter.ts#L6)
+[KeyValueAdapter.ts:6](https://github.com/totalpave/object/blob/0ba4518/src/KeyValueAdapter.ts#L6)
 
 ## Methods
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[KeyValueAdapter.ts:18](https://github.com/totalpave/object/blob/0eede96/src/KeyValueAdapter.ts#L18)
+[KeyValueAdapter.ts:18](https://github.com/totalpave/object/blob/0ba4518/src/KeyValueAdapter.ts#L18)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[KeyValueAdapter.ts:14](https://github.com/totalpave/object/blob/0eede96/src/KeyValueAdapter.ts#L14)
+[KeyValueAdapter.ts:14](https://github.com/totalpave/object/blob/0ba4518/src/KeyValueAdapter.ts#L14)
 
 ___
 
@@ -101,4 +101,4 @@ ___
 
 #### Defined in
 
-[KeyValueAdapter.ts:10](https://github.com/totalpave/object/blob/0eede96/src/KeyValueAdapter.ts#L10)
+[KeyValueAdapter.ts:10](https://github.com/totalpave/object/blob/0ba4518/src/KeyValueAdapter.ts#L10)
