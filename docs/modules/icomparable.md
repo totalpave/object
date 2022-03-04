@@ -1,4 +1,4 @@
-[@totalpave/object - v1.0.0](../README.md) / [Exports](../modules.md) / IComparable
+[@totalpave/object - v1.1.0](../README.md) / [Exports](../modules.md) / IComparable
 
 # Module: IComparable
 
@@ -6,4 +6,4 @@
 
 ### Interfaces
 
-- [IComparable](../interfaces/icomparable.icomparable-1.md)
+- [IComparable](../interfaces/IComparable.IComparable-1.md)

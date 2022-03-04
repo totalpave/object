@@ -1,94 +1,106 @@
-[@totalpave/object - v1.0.0](../README.md) / [Exports](../modules.md) / [KeyValueAdapter](../modules/keyvalueadapter.md) / KeyValueAdapter
+[@totalpave/object - v1.1.0](../README.md) / [Exports](../modules.md) / [KeyValueAdapter](../modules/KeyValueAdapter.md) / KeyValueAdapter
 
 # Class: KeyValueAdapter<TMap\>
 
-[KeyValueAdapter](../modules/keyvalueadapter.md).KeyValueAdapter
+[KeyValueAdapter](../modules/KeyValueAdapter.md).KeyValueAdapter
 
 ## Type parameters
 
-Name | Type | Default |
-:------ | :------ | :------ |
-`TMap` | IDictionary | IDictionary |
+| Name | Type |
+| :------ | :------ |
+| `TMap` | extends `IDictionary``IDictionary` |
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](keyvalueadapter.keyvalueadapter-1.md#constructor)
+- [constructor](KeyValueAdapter.KeyValueAdapter-1.md#constructor)
 
 ### Methods
 
-- [adapt](keyvalueadapter.keyvalueadapter-1.md#adapt)
-- [setAdapterKey](keyvalueadapter.keyvalueadapter-1.md#setadapterkey)
-- [setAdapterMap](keyvalueadapter.keyvalueadapter-1.md#setadaptermap)
+- [adapt](KeyValueAdapter.KeyValueAdapter-1.md#adapt)
+- [setAdapterKey](KeyValueAdapter.KeyValueAdapter-1.md#setadapterkey)
+- [setAdapterMap](KeyValueAdapter.KeyValueAdapter-1.md#setadaptermap)
 
 ## Constructors
 
 ### constructor
 
-\+ **new KeyValueAdapter**<TMap\>(`adapterMap`: TMap): [*KeyValueAdapter*](keyvalueadapter.keyvalueadapter-1.md)<TMap\>
+• **new KeyValueAdapter**<`TMap`\>(`adapterMap`)
 
-#### Type parameters:
+#### Type parameters
 
-Name | Type | Default |
-:------ | :------ | :------ |
-`TMap` | *IDictionary*<any, TMap\> | *IDictionary*<any\> |
+| Name | Type |
+| :------ | :------ |
+| `TMap` | extends `IDictionary`<`any`, `TMap`\>`IDictionary`<`any`\> |
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`adapterMap` | TMap |
+| Name | Type |
+| :------ | :------ |
+| `adapterMap` | `TMap` |
 
-**Returns:** [*KeyValueAdapter*](keyvalueadapter.keyvalueadapter-1.md)<TMap\>
+#### Defined in
 
-Defined in: [KeyValueAdapter.ts:4](https://github.com/totalpave/object/blob/53c6978/src/KeyValueAdapter.ts#L4)
+[KeyValueAdapter.ts:6](https://github.com/totalpave/object/blob/539a0d4/src/KeyValueAdapter.ts#L6)
 
 ## Methods
 
 ### adapt
 
-▸ **adapt**(`key`: keyof TMap): TMap[keyof TMap]
+▸ **adapt**(`key`): `TMap`[keyof `TMap`]
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`key` | keyof TMap |
+| Name | Type |
+| :------ | :------ |
+| `key` | keyof `TMap` |
 
-**Returns:** TMap[keyof TMap]
+#### Returns
 
-Defined in: [KeyValueAdapter.ts:18](https://github.com/totalpave/object/blob/53c6978/src/KeyValueAdapter.ts#L18)
+`TMap`[keyof `TMap`]
+
+#### Defined in
+
+[KeyValueAdapter.ts:18](https://github.com/totalpave/object/blob/539a0d4/src/KeyValueAdapter.ts#L18)
 
 ___
 
 ### setAdapterKey
 
-▸ **setAdapterKey**(`key`: keyof TMap, `value`: TMap[keyof TMap]): *void*
+▸ **setAdapterKey**(`key`, `value`): `void`
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`key` | keyof TMap |
-`value` | TMap[keyof TMap] |
+| Name | Type |
+| :------ | :------ |
+| `key` | keyof `TMap` |
+| `value` | `TMap`[keyof `TMap`] |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: [KeyValueAdapter.ts:14](https://github.com/totalpave/object/blob/53c6978/src/KeyValueAdapter.ts#L14)
+`void`
+
+#### Defined in
+
+[KeyValueAdapter.ts:14](https://github.com/totalpave/object/blob/539a0d4/src/KeyValueAdapter.ts#L14)
 
 ___
 
 ### setAdapterMap
 
-▸ **setAdapterMap**(`adapterMap`: TMap): *void*
+▸ **setAdapterMap**(`adapterMap`): `void`
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`adapterMap` | TMap |
+| Name | Type |
+| :------ | :------ |
+| `adapterMap` | `TMap` |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: [KeyValueAdapter.ts:10](https://github.com/totalpave/object/blob/53c6978/src/KeyValueAdapter.ts#L10)
+`void`
+
+#### Defined in
+
+[KeyValueAdapter.ts:10](https://github.com/totalpave/object/blob/539a0d4/src/KeyValueAdapter.ts#L10)

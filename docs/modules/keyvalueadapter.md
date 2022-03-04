@@ -1,4 +1,4 @@
-[@totalpave/object - v1.0.0](../README.md) / [Exports](../modules.md) / KeyValueAdapter
+[@totalpave/object - v1.1.0](../README.md) / [Exports](../modules.md) / KeyValueAdapter
 
 # Module: KeyValueAdapter
 
@@ -6,4 +6,4 @@
 
 ### Classes
 
-- [KeyValueAdapter](../classes/keyvalueadapter.keyvalueadapter-1.md)
+- [KeyValueAdapter](../classes/KeyValueAdapter.KeyValueAdapter-1.md)

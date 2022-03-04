@@ -1,4 +1,4 @@
-[@totalpave/object - v1.0.0](../README.md) / [Exports](../modules.md) / ICloneable
+[@totalpave/object - v1.1.0](../README.md) / [Exports](../modules.md) / ICloneable
 
 # Module: ICloneable
 
@@ -6,4 +6,4 @@
 
 ### Interfaces
 
-- [ICloneable](../interfaces/icloneable.icloneable-1.md)
+- [ICloneable](../interfaces/ICloneable.ICloneable-1.md)

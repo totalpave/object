@@ -1,4 +1,4 @@
-[@totalpave/object - v1.0.0](../README.md) / [Exports](../modules.md) / ObjectUtils
+[@totalpave/object - v1.1.0](../README.md) / [Exports](../modules.md) / ObjectUtils
 
 # Module: ObjectUtils
 
@@ -6,4 +6,4 @@
 
 ### Classes
 
-- [ObjectUtils](../classes/objectutils.objectutils-1.md)
+- [ObjectUtils](../classes/ObjectUtils.ObjectUtils-1.md)

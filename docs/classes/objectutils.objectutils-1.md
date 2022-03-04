@@ -1,121 +1,149 @@
-[@totalpave/object - v1.0.0](../README.md) / [Exports](../modules.md) / [ObjectUtils](../modules/objectutils.md) / ObjectUtils
+[@totalpave/object - v1.1.0](../README.md) / [Exports](../modules.md) / [ObjectUtils](../modules/ObjectUtils.md) / ObjectUtils
 
 # Class: ObjectUtils
 
-[ObjectUtils](../modules/objectutils.md).ObjectUtils
+[ObjectUtils](../modules/ObjectUtils.md).ObjectUtils
 
 ## Table of contents
 
 ### Methods
 
-- [clone](objectutils.objectutils-1.md#clone)
-- [compare](objectutils.objectutils-1.md#compare)
-- [isVoid](objectutils.objectutils-1.md#isvoid)
-- [merge](objectutils.objectutils-1.md#merge)
-- [toArray](objectutils.objectutils-1.md#toarray)
+- [clone](ObjectUtils.ObjectUtils-1.md#clone)
+- [compare](ObjectUtils.ObjectUtils-1.md#compare)
+- [isVoid](ObjectUtils.ObjectUtils-1.md#isvoid)
+- [merge](ObjectUtils.ObjectUtils-1.md#merge)
+- [toArray](ObjectUtils.ObjectUtils-1.md#toarray)
 
 ## Methods
 
 ### clone
 
-▸ `Static`**clone**(`o`: *any*): *any*
+▸ `Static` **clone**(`o`): `any`
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`o` | *any* |
+| Name | Type |
+| :------ | :------ |
+| `o` | `any` |
 
-**Returns:** *any*
+#### Returns
 
-Defined in: [ObjectUtils.ts:29](https://github.com/totalpave/object/blob/53c6978/src/ObjectUtils.ts#L29)
+`any`
+
+#### Defined in
+
+[ObjectUtils.ts:30](https://github.com/totalpave/object/blob/539a0d4/src/ObjectUtils.ts#L30)
 
 ___
 
 ### compare
 
-▸ `Static`**compare**(`o1`: *any*, `o2`: *any*): *boolean*
+▸ `Static` **compare**(`o1`, `o2`): `boolean`
 
 Recursively compares two objects to determine if they are the same
-value wise. Wil return true if the two objects
+value wise. Will return true if the two objects
 are referencing two different objects, but both
 objects have the same keys and values.
 
 If an object has a `compare()` method, it will be invoked via
 `o1.compare(o2)`. See `IComparable` interface
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`o1` | *any* |
-`o2` | *any* |
+| Name | Type |
+| :------ | :------ |
+| `o1` | `any` |
+| `o2` | `any` |
 
-**Returns:** *boolean*
+#### Returns
 
-Defined in: [ObjectUtils.ts:91](https://github.com/totalpave/object/blob/53c6978/src/ObjectUtils.ts#L91)
+`boolean`
+
+#### Defined in
+
+[ObjectUtils.ts:103](https://github.com/totalpave/object/blob/539a0d4/src/ObjectUtils.ts#L103)
 
 ___
 
 ### isVoid
 
-▸ `Static`**isVoid**(`o`: *any*): *boolean*
+▸ `Static` **isVoid**<`T`\>(`o`): `boolean`
 
-#### Parameters:
+Returns true if the input object is null or undefined.
 
-Name | Type |
-:------ | :------ |
-`o` | *any* |
+#### Type parameters
 
-**Returns:** *boolean*
+| Name | Type |
+| :------ | :------ |
+| `T` | `any` |
 
-Defined in: [ObjectUtils.ts:74](https://github.com/totalpave/object/blob/53c6978/src/ObjectUtils.ts#L74)
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `o` | `T` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[ObjectUtils.ts:86](https://github.com/totalpave/object/blob/539a0d4/src/ObjectUtils.ts#L86)
 
 ___
 
 ### merge
 
-▸ `Static`**merge**<T1, T2\>(`o1`: T1, `o2`: T2): *IDictionary*<any\>
+▸ `Static` **merge**<`T1`, `T2`\>(`o1`, `o2`): `IDictionary`<`any`\>
 
 Merges o2 into o1. Only does shallow merges.
 o2 properties will overwrite o1 properties.
 
-#### Type parameters:
+#### Type parameters
 
-Name | Default |
-:------ | :------ |
-`T1` | *any* |
-`T2` | *any* |
+| Name | Type |
+| :------ | :------ |
+| `T1` | `any` |
+| `T2` | `any` |
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`o1` | T1 | The base object   |
-`o2` | T2 | The merging object    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `o1` | `T1` | The base object |
+| `o2` | `T2` | The merging object |
 
-**Returns:** *IDictionary*<any\>
+#### Returns
 
-Defined in: [ObjectUtils.ts:21](https://github.com/totalpave/object/blob/53c6978/src/ObjectUtils.ts#L21)
+`IDictionary`<`any`\>
+
+#### Defined in
+
+[ObjectUtils.ts:22](https://github.com/totalpave/object/blob/539a0d4/src/ObjectUtils.ts#L22)
 
 ___
 
 ### toArray
 
-▸ `Static`**toArray**<T\>(`o`: { [key: string]: T;  }): T[]
+▸ `Static` **toArray**<`T`\>(`o`): `T`[]
 
-#### Type parameters:
+#### Type parameters
 
-Name | Default |
-:------ | :------ |
-`T` | *any* |
+| Name | Type |
+| :------ | :------ |
+| `T` | `any` |
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`o` | *object* |
+| Name | Type |
+| :------ | :------ |
+| `o` | `Object` |
 
-**Returns:** T[]
+#### Returns
 
-Defined in: [ObjectUtils.ts:6](https://github.com/totalpave/object/blob/53c6978/src/ObjectUtils.ts#L6)
+`T`[]
+
+#### Defined in
+
+[ObjectUtils.ts:7](https://github.com/totalpave/object/blob/539a0d4/src/ObjectUtils.ts#L7)
