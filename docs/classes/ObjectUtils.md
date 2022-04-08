@@ -1,4 +1,4 @@
-[@totalpave/object - v1.1.2](../README.md) / [Exports](../modules.md) / ObjectUtils
+[@totalpave/object - v1.1.3](../README.md) / [Exports](../modules.md) / ObjectUtils
 
 # Class: ObjectUtils
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[ObjectUtils.ts:30](https://github.com/totalpave/object/blob/0ba4518/src/ObjectUtils.ts#L30)
+[ObjectUtils.ts:30](https://github.com/totalpave/object/blob/46425b4/src/ObjectUtils.ts#L30)
 
 ___
 
@@ -59,7 +59,7 @@ If an object has a `compare()` method, it will be invoked via
 
 #### Defined in
 
-[ObjectUtils.ts:103](https://github.com/totalpave/object/blob/0ba4518/src/ObjectUtils.ts#L103)
+[ObjectUtils.ts:103](https://github.com/totalpave/object/blob/46425b4/src/ObjectUtils.ts#L103)
 
 ___
 
@@ -87,7 +87,7 @@ Returns true if the input object is null or undefined.
 
 #### Defined in
 
-[ObjectUtils.ts:86](https://github.com/totalpave/object/blob/0ba4518/src/ObjectUtils.ts#L86)
+[ObjectUtils.ts:86](https://github.com/totalpave/object/blob/46425b4/src/ObjectUtils.ts#L86)
 
 ___
 
@@ -118,7 +118,7 @@ o2 properties will overwrite o1 properties.
 
 #### Defined in
 
-[ObjectUtils.ts:22](https://github.com/totalpave/object/blob/0ba4518/src/ObjectUtils.ts#L22)
+[ObjectUtils.ts:22](https://github.com/totalpave/object/blob/46425b4/src/ObjectUtils.ts#L22)
 
 ___
 
@@ -144,4 +144,4 @@ ___
 
 #### Defined in
 
-[ObjectUtils.ts:7](https://github.com/totalpave/object/blob/0ba4518/src/ObjectUtils.ts#L7)
+[ObjectUtils.ts:7](https://github.com/totalpave/object/blob/46425b4/src/ObjectUtils.ts#L7)

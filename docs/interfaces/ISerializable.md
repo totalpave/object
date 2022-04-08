@@ -1,4 +1,4 @@
-[@totalpave/object - v1.1.2](../README.md) / [Exports](../modules.md) / ISerializable
+[@totalpave/object - v1.1.3](../README.md) / [Exports](../modules.md) / ISerializable
 
 # Interface: ISerializable
 
@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[ISerializable.ts:3](https://github.com/totalpave/object/blob/0ba4518/src/ISerializable.ts#L3)
+[ISerializable.ts:3](https://github.com/totalpave/object/blob/46425b4/src/ISerializable.ts#L3)

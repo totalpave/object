@@ -1,4 +1,4 @@
-[@totalpave/object - v1.1.2](../README.md) / [Exports](../modules.md) / IComparable
+[@totalpave/object - v1.1.3](../README.md) / [Exports](../modules.md) / IComparable
 
 # Interface: IComparable
 
@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[IComparable.ts:3](https://github.com/totalpave/object/blob/0ba4518/src/IComparable.ts#L3)
+[IComparable.ts:3](https://github.com/totalpave/object/blob/46425b4/src/IComparable.ts#L3)
