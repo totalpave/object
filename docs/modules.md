@@ -1,6 +1,6 @@
-[@totalpave/object - v1.1.3](README.md) / Exports
+[@totalpave/object - v2.0.0](README.md) / Exports
 
-# @totalpave/object - v1.1.3
+# @totalpave/object - v2.0.0
 
 ## Table of contents
 
@@ -8,9 +8,3 @@
 
 - [KeyValueAdapter](classes/KeyValueAdapter.md)
 - [ObjectUtils](classes/ObjectUtils.md)
-
-### Interfaces
-
-- [ICloneable](interfaces/ICloneable.md)
-- [IComparable](interfaces/IComparable.md)
-- [ISerializable](interfaces/ISerializable.md)

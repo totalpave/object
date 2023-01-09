@@ -1,4 +1,4 @@
-[@totalpave/object - v1.1.3](../README.md) / [Exports](../modules.md) / ObjectUtils
+[@totalpave/object - v2.0.0](../README.md) / [Exports](../modules.md) / ObjectUtils
 
 # Class: ObjectUtils
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[ObjectUtils.ts:30](https://github.com/totalpave/object/blob/46425b4/src/ObjectUtils.ts#L30)
+[ObjectUtils.ts:30](https://github.com/totalpave/object/blob/abf8cf9/src/ObjectUtils.ts#L30)
 
 ___
 
@@ -59,7 +59,7 @@ If an object has a `compare()` method, it will be invoked via
 
 #### Defined in
 
-[ObjectUtils.ts:103](https://github.com/totalpave/object/blob/46425b4/src/ObjectUtils.ts#L103)
+[ObjectUtils.ts:103](https://github.com/totalpave/object/blob/abf8cf9/src/ObjectUtils.ts#L103)
 
 ___
 
@@ -87,13 +87,13 @@ Returns true if the input object is null or undefined.
 
 #### Defined in
 
-[ObjectUtils.ts:86](https://github.com/totalpave/object/blob/46425b4/src/ObjectUtils.ts#L86)
+[ObjectUtils.ts:86](https://github.com/totalpave/object/blob/abf8cf9/src/ObjectUtils.ts#L86)
 
 ___
 
 ### merge
 
-▸ `Static` **merge**<`T1`, `T2`\>(`o1`, `o2`): `IDictionary`<`any`\>
+▸ `Static` **merge**<`T1`, `T2`\>(`o1`, `o2`): `Record`<`string`, `any`\>
 
 Merges o2 into o1. Only does shallow merges.
 o2 properties will overwrite o1 properties.
@@ -114,11 +114,11 @@ o2 properties will overwrite o1 properties.
 
 #### Returns
 
-`IDictionary`<`any`\>
+`Record`<`string`, `any`\>
 
 #### Defined in
 
-[ObjectUtils.ts:22](https://github.com/totalpave/object/blob/46425b4/src/ObjectUtils.ts#L22)
+[ObjectUtils.ts:22](https://github.com/totalpave/object/blob/abf8cf9/src/ObjectUtils.ts#L22)
 
 ___
 
@@ -144,4 +144,4 @@ ___
 
 #### Defined in
 
-[ObjectUtils.ts:7](https://github.com/totalpave/object/blob/46425b4/src/ObjectUtils.ts#L7)
+[ObjectUtils.ts:7](https://github.com/totalpave/object/blob/abf8cf9/src/ObjectUtils.ts#L7)
