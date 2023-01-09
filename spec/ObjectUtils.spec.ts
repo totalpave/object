@@ -1,6 +1,5 @@
 
 import {ObjectUtils} from '../src/ObjectUtils';
-import {IComparable} from '../src/IComparable';
 import { Blob } from '@totalpave/blob';
 
 describe('ObjectUtils', () => {
@@ -451,22 +450,6 @@ describe('ObjectUtils', () => {
 
             it('should return false (key length mismatch)', () => {
                 expect(ObjectUtils.compare({}, {hi:true})).toBe(false);
-            });
-        });
-
-        describe('compare method', () => {
-            let obj: IComparable = {
-                compare: (o: any): boolean => {
-                    return o.hi === true;
-                }
-            };
-
-            it('should return true', () => {
-                expect(ObjectUtils.compare(obj, {hi:true, test:123})).toBe(true);
-            });
-
-            it('should return false', () => {
-                expect(ObjectUtils.compare(obj, {hi:false, test:123})).toBe(false);
             });
         });
 

@@ -1,4 +1,4 @@
-import { IDictionary } from '@totalpave/interfaces';
+
 import { Blob } from '@totalpave/blob';
 
 export class ObjectUtils {
@@ -19,7 +19,7 @@ export class ObjectUtils {
      * @param o1 The base object
      * @param o2 The merging object
      */
-    public static merge<T1 = any, T2 = any>(o1: T1, o2: T2): IDictionary {
+    public static merge<T1 = any, T2 = any>(o1: T1, o2: T2): Record<string, any> {
         return {
             ...o1,
             ...o2

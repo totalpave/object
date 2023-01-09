@@ -1,6 +1,5 @@
-import { IDictionary } from '@totalpave/interfaces';
 
-export class KeyValueAdapter<TMap extends IDictionary = IDictionary> {
+export class KeyValueAdapter<TMap extends Record<any, any> = Record<string, string>> {
     private $map: TMap;
 
     public constructor(adapterMap: TMap) {
@@ -17,7 +16,7 @@ export class KeyValueAdapter<TMap extends IDictionary = IDictionary> {
 
     public adapt(key: keyof TMap): TMap[keyof TMap] {
         if (Object.keys(this.$map).indexOf(<string>key) === -1) {
-            throw new Error(`Key "${key}" doesn't exist in map.`);
+            throw new Error(`Key "${String(key)}" doesn't exist in map.`);
         }
         
         return this.$map[key];
