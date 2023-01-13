@@ -1,4 +1,4 @@
-@totalpave/object - v2.0.0 / [Exports](modules.md)
+@totalpave/object - v3.0.0 / [Exports](modules.md)
 
 # @totalpave/object
 
