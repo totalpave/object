@@ -1,5 +1,7 @@
 
-export class KeyValueAdapter<TMap extends Record<any, any> = Record<string, string>> {
+import {IKeyValueAdapter} from '@totalpave/interfaces';
+
+export class KeyValueAdapter<TMap extends Record<any, any> = Record<string, string>> implements IKeyValueAdapter<TMap> {
     private $map: TMap;
 
     public constructor(adapterMap: TMap) {
