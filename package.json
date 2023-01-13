@@ -1,6 +1,6 @@
 {
   "name": "@totalpave/object",
-  "version": "3.0.0-dev",
+  "version": "3.0.0",
   "description": "Object library",
   "main": "lib/api.js",
   "types": "lib/api.d.ts",
