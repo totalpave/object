@@ -53,19 +53,19 @@ describe('ObjectUtils', () => {
         });
 
         it('array', () => {
-            let arr: Array<number> = [
+            let arr: number[] = [
                 1,
                 2,
                 3
             ];
 
-            let clone: Array<number> = ObjectUtils.clone(arr);
+            let clone: number[] = ObjectUtils.clone(arr);
             expect(clone).toEqual(arr);
             expect(clone).not.toBe(arr);
         });
 
         it('nested arrays', () => {
-            let arr: Array<Array<Array<number>>> = [
+            let arr: number[][][] = [
                 [
                     [
                         1,
@@ -119,25 +119,25 @@ describe('ObjectUtils', () => {
                 ]
             ];
 
-            let clone: Array<Array<Array<number>>> = ObjectUtils.clone(arr);
+            let clone: number[][][] = ObjectUtils.clone(arr);
             expect(clone).toEqual(arr);
             expect(clone).not.toBe(arr);
         });
 
         it('Array of dates', () => {
-            let arr: Array<Date> = [
+            let arr: Date[] = [
                 new Date(),
                 new Date(),
                 new Date()
             ];
 
-            let clone: Array<any> = ObjectUtils.clone(arr);
+            let clone: any[] = ObjectUtils.clone(arr);
             expect(clone).toEqual(arr);
             expect(clone).not.toBe(arr);
         });
 
         it('Array of objects', () => {
-            let arr: Array<any> = [
+            let arr: any[] = [
                 {
                     test: true
                 },
@@ -148,14 +148,14 @@ describe('ObjectUtils', () => {
                 }
             ];
 
-            let expectation: Array<any> = [
+            let expectation: any[] = [
                 {
                     test: true
                 },
                 'cloned'
             ];
 
-            let clone: Array<any> = ObjectUtils.clone(arr);
+            let clone: any[] = ObjectUtils.clone(arr);
             expect(clone).toEqual(expectation);
             expect(clone).not.toBe(arr);
         });
@@ -176,7 +176,7 @@ describe('ObjectUtils', () => {
 
         it('Array of Blob', () => {
             let blob: Blob = new Blob([ 'my data' ]);
-            let clone: Array<Blob> = ObjectUtils.clone([ blob ]);
+            let clone: Blob[] = ObjectUtils.clone([ blob ]);
             expect(clone[0] instanceof Blob).toBe(true);
         });
 

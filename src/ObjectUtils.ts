@@ -4,8 +4,8 @@ import { Blob } from '@totalpave/blob';
 export class ObjectUtils {
     private constructor() {}
 
-    public static toArray<T = any>(o: {[key: string]: T}): Array<T> {
-        let arr: Array<T> = [];
+    public static toArray<T = any>(o: {[key: string]: T}): T[] {
+        let arr: T[] = [];
         for (let i in o) {
             arr.push(o[i]);
         }
