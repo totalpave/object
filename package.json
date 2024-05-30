@@ -46,6 +46,7 @@
     "typescript": "5.2.2"
   },
   "peerDependencies": {
-    "@totalpave/interfaces": ">=4.12 <5"
+    "@totalpave/interfaces": ">=4.12 <5",
+    "@totalpave/blob": "1.x"
   }
 }
