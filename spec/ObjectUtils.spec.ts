@@ -1,6 +1,5 @@
 
 import {ObjectUtils} from '../src/ObjectUtils';
-import { Blob } from '@totalpave/blob';
 
 describe('ObjectUtils', () => {
     it('toArray', () => {

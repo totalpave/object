@@ -1,6 +1,4 @@
 
-import { Blob } from '@totalpave/blob';
-
 export class ObjectUtils {
     private constructor() {}
 
