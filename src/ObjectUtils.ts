@@ -26,7 +26,6 @@ export class ObjectUtils {
         };
     }
 
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     public static clone(o: any): any {
         // Check for pass-by-val types
         if (!o || o === true || typeof o === 'string' || typeof o === 'number') {
@@ -99,7 +98,6 @@ export class ObjectUtils {
      * @param o1 
      * @param o2 
      */
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     public static compare(o1: any, o2: any): boolean {
         if (ObjectUtils.isVoid(o1) || ObjectUtils.isVoid(o2)) {
             return o1 === o2;

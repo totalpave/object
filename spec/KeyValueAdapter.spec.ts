@@ -48,10 +48,10 @@ describe('KeyValueAdapter', () => {
             rawr?: string;
         }
 
-        let adapter: KeyValueAdapter<ITestMap> = new KeyValueAdapter(<ITestMap>{
+        let adapter: KeyValueAdapter<ITestMap> = new KeyValueAdapter({
             test: "hi",
             value: "world"
-        });
+        } as ITestMap);
 
         expect(adapter.adapt('test')).toBe('hi');
         expect(adapter.adapt('value')).toBe('world');
@@ -76,7 +76,7 @@ describe('KeyValueAdapter', () => {
 
         let key = "asdf";
         expect(() => {
-            adapter.adapt(<any>key);
-        }).toThrowError(`Key "${key}" doesn't exist in map.`);
+            adapter.adapt(key as keyof ITestMap);
+        }).toThrow(`Key "${key}" doesn't exist in map.`);
     });
 });

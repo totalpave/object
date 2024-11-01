@@ -17,7 +17,7 @@ export class KeyValueAdapter<TMap extends Record<any, any> = Record<string, stri
     }
 
     public adapt(key: keyof TMap): TMap[keyof TMap] {
-        if (Object.keys(this.$map).indexOf(<string>key) === -1) {
+        if (Object.keys(this.$map).indexOf(key as string) === -1) {
             throw new Error(`Key "${String(key)}" doesn't exist in map.`);
         }
         

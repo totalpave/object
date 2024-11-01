@@ -142,7 +142,7 @@ describe('ObjectUtils', () => {
                     test: true
                 },
                 {
-                    clone: () => {
+                    clone: (): any => {
                         return 'cloned';
                     }
                 }
