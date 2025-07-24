@@ -39,7 +39,7 @@ export class ObjectUtils {
         }
 
         if (o instanceof Blob) {
-            return o.slice();
+            return new Blob([o], {"type": o.type});
         }
 
         let isArray: boolean = o instanceof Array;
@@ -58,7 +58,7 @@ export class ObjectUtils {
                 value = new Date(value.getTime());
             }
             else if (value instanceof Blob) {
-                value = value.slice();
+                value = new Blob([value], {"type":value.type});
             }
             else if (typeof value === 'object') {
                 if (value !== null && typeof value.clone === 'function') {
@@ -169,6 +169,58 @@ export class ObjectUtils {
                 }
             }
             else {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static keySearch(o: any, regex: RegExp): string[] {
+        if (!o) {
+            return [];
+        }
+
+        if (!regex) {
+            return [];
+        }
+
+        let keys = Object.keys(o);
+        let results: string[] = [];
+
+        for (let i = 0; i < keys.length; i++) {
+            let key = keys[i];
+            if (regex.test(key)) {
+                results.push(key);
+            }
+        }
+
+        return results;
+    }
+
+    /**
+     * returns true if the object has at least 1 property
+     * @param obj 
+     * @returns 
+     */
+    public static hasProps(obj: any): boolean {
+        for (let key in obj) {
+            return true;
+        }
+        return false;
+    }
+
+    public static isEqual(objOne: any, objTwo: any): boolean {
+        if (ObjectUtils.isVoid(objOne) || ObjectUtils.isVoid(objTwo)) {
+            return objOne === objTwo;
+        }
+        
+        if (Object.keys(objOne).length !== Object.keys(objTwo).length){
+            return false;
+        }
+
+        for (let key in objOne) {
+            if (objOne[key] !== objTwo[key]){
                 return false;
             }
         }

@@ -17,6 +17,93 @@ describe('ObjectUtils', () => {
     });
 
     describe('clone', () => {
+        describe('tests from tp-app-common', () => {
+            it('Clone Null', () => {
+                expect(ObjectUtils.clone(null)).toBe(null);
+            });
+
+            it('Clone Undefined', () => {
+                expect(ObjectUtils.clone(undefined)).toBe(undefined);
+            });
+
+            it('Clone String', () => {
+                let string = "bob is blue";
+                expect(ObjectUtils.clone(string)).toBe(string);
+            });
+
+            it('Clone Negative int', () => {
+                let number = -1;
+                expect(ObjectUtils.clone(number)).toBe(number);
+            });
+
+            it('Clone Positive int', () => {
+                let number = 1;
+                expect(ObjectUtils.clone(number)).toBe(number);
+            });
+
+            it('Clone Negative float', () => {
+                let number = -1.5;
+                expect(ObjectUtils.clone(number)).toBe(number);
+            });
+
+            it('Clone Positive float', () => {
+                let number = 1.5;
+                expect(ObjectUtils.clone(number)).toBe(number);
+            });
+
+            it('Clone Negative Boolean', () => {
+                let bool = false;
+                expect(ObjectUtils.clone(bool)).toBe(bool);
+            });
+
+            it('Clone Positive Boolean', () => {
+                let bool = true;
+                expect(ObjectUtils.clone(bool)).toBe(bool);
+            });
+
+            it('Clone Simple Object', () => {
+                let obj = {
+                    bob: "is blue"
+                };
+                expect(ObjectUtils.clone(obj)).not.toBe(obj);
+            });
+
+            it('Clone Simple Array', () => {
+                let obj = ["bob is blue"];
+                expect(ObjectUtils.clone(obj)).not.toBe(obj);
+            });
+
+            it('Clone Dictionary', () => {
+                let obj: Record<string, any> = {};
+                obj["bob"] = "is blue";
+                expect(ObjectUtils.clone(obj)).not.toBe(obj);
+            });
+
+
+            it('Clone Array with pass-by-ref value', () => {
+                class myClass {
+                    public name: string;
+                    constructor(name: string) {
+                        this.name = name;
+                    }
+                }
+
+                let arr = [
+                    {
+                        bob: "blue"
+                    },
+                    new myClass("bobisblue"),
+                    ["bob is blue"]
+                ];
+                let clone = ObjectUtils.clone(arr);
+
+                expect(clone).not.toBe(arr);
+                for (let i = 0; i < arr.length; ++i) {
+                    expect(clone[i]).not.toBe(arr[i]);
+                }
+            });
+        });
+
         it('number', () => {
             expect(ObjectUtils.clone(123)).toBe(123);
         });

@@ -28,17 +28,17 @@
   },
   "homepage": "https://github.com/totalpave/object#readme",
   "devDependencies": {
-    "@totalpave/eslint-plugin": "7.0.12",
-    "@totalpave/interfaces": "4.77.2",
+    "@totalpave/eslint-plugin": "7.0.14",
+    "@totalpave/interfaces": "4.80.0",
     "@types/jest": "30.0.0",
-    "@types/node": "24.0.13",
+    "@types/node": "24.1.0",
     "auto-changelog": "2.5.0",
-    "jest": "30.0.4",
+    "jest": "30.0.5",
     "ts-jest": "29.4.0",
     "ts-node": "10.9.2",
     "tslib": "2.8.1",
     "typedoc": "0.28.7",
-    "typedoc-plugin-markdown": "4.7.0",
+    "typedoc-plugin-markdown": "4.7.1",
     "typescript": "5.8.3"
   },
   "peerDependencies": {
