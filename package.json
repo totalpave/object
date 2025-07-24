@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/totalpave/object#readme",
   "devDependencies": {
+    "@jest/types": "30.0.5",
     "@totalpave/eslint-plugin": "7.0.14",
     "@totalpave/interfaces": "4.80.0",
     "@types/jest": "30.0.0",
