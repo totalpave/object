@@ -79,4 +79,27 @@ describe('KeyValueAdapter', () => {
             adapter.adapt(key as keyof ITestMap);
         }).toThrow(`Key "${key}" doesn't exist in map.`);
     });
+
+    it('hasMapping should return true', () => {
+        interface ITestMap {
+            test: string;
+            value: string;
+        }
+
+        let adapter: KeyValueAdapter<ITestMap> = new KeyValueAdapter({
+            test: "hi",
+            value: "world"
+        });
+
+        expect(adapter.hasMapping('value')).toBe(true);
+    });
+
+    it('hasMapping should return false', () => {
+        let adapter = new KeyValueAdapter<Record<string, any>>({
+            test: "hi",
+            value: "world"
+        });
+
+        expect(adapter.hasMapping('doesnotexist')).toBe(false);
+    });
 });
