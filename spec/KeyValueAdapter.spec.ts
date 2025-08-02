@@ -8,7 +8,12 @@ describe('KeyValueAdapter', () => {
             value: string;
         }
 
-        let adapter: KeyValueAdapter<ITestMap> = new KeyValueAdapter({
+        interface ITestOutMap {
+            hi: string;
+            world: string;
+        }
+
+        let adapter: KeyValueAdapter<ITestMap, ITestOutMap> = new KeyValueAdapter({
             test: "hi",
             value: "world"
         });
@@ -23,7 +28,14 @@ describe('KeyValueAdapter', () => {
             value: string;
         }
 
-        let adapter: KeyValueAdapter<ITestMap> = new KeyValueAdapter({
+        interface ITestOutMap {
+            hi: string;
+            world: string;
+            rawr: string;
+            thesky: string;
+        }
+
+        let adapter: KeyValueAdapter<ITestMap, ITestOutMap> = new KeyValueAdapter({
             test: "hi",
             value: "world"
         });
@@ -43,15 +55,22 @@ describe('KeyValueAdapter', () => {
 
     it('setAdaptKey', () => {
         interface ITestMap {
-            test?: string;
-            value?: string;
-            rawr?: string;
+            test: string;
+            value: string;
+            rawr: string;
         }
 
-        let adapter: KeyValueAdapter<ITestMap> = new KeyValueAdapter({
+        interface ITestOutMap {
+            hi: string;
+            world: string;
+            thesky: string;
+        }
+
+        let adapter: KeyValueAdapter<ITestMap, ITestOutMap> = new KeyValueAdapter({
             test: "hi",
-            value: "world"
-        } as ITestMap);
+            value: "world",
+            rawr: null
+        });
 
         expect(adapter.adapt('test')).toBe('hi');
         expect(adapter.adapt('value')).toBe('world');
@@ -64,19 +83,14 @@ describe('KeyValueAdapter', () => {
     });
 
     it('should error', () => {
-        interface ITestMap {
-            test: string;
-            value: string;
-        }
-
-        let adapter: KeyValueAdapter<ITestMap> = new KeyValueAdapter({
+        let adapter: KeyValueAdapter<any, any> = new KeyValueAdapter({
             test: "hi",
             value: "world"
         });
 
         let key = "asdf";
         expect(() => {
-            adapter.adapt(key as keyof ITestMap);
+            adapter.adapt(key);
         }).toThrow(`Key "${key}" doesn't exist in map.`);
     });
 
@@ -86,7 +100,12 @@ describe('KeyValueAdapter', () => {
             value: string;
         }
 
-        let adapter: KeyValueAdapter<ITestMap> = new KeyValueAdapter({
+        interface ITestOutMap {
+            hi: string;
+            world: string;
+        }
+
+        let adapter: KeyValueAdapter<ITestMap, ITestOutMap> = new KeyValueAdapter({
             test: "hi",
             value: "world"
         });
@@ -95,7 +114,7 @@ describe('KeyValueAdapter', () => {
     });
 
     it('hasMapping should return false', () => {
-        let adapter = new KeyValueAdapter<Record<string, any>>({
+        let adapter = new KeyValueAdapter<any, any>({
             test: "hi",
             value: "world"
         });
